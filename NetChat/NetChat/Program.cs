@@ -18,7 +18,7 @@ namespace NetChat
             IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Any, 0);
             Dictionary<string, Message> messages = new Dictionary<string, Message>();
 
-            Console.WriteLine("Сервер ждет сообщение от клиента");
+            Console.WriteLine("Waiting for client's message: ");
 
             while (true)
             {
@@ -35,12 +35,15 @@ namespace NetChat
                     messages.Add(message.Id, message);
 
                     // Process the message and send a confirmation message back to the client
-                    Thread.Sleep(1000); // Add a 1-second delay
+                    Thread.Sleep(1000);
                     string confirmationMessage = "Message received successfully";
                     byte[] confirmationData = Encoding.UTF8.GetBytes(confirmationMessage);
                     udpClient.Send(confirmationData, confirmationData.Length, iPEndPoint);
                 }
             }
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
         }
         static Message DeserializeMessage(byte[] buffer)
         {

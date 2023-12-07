@@ -24,8 +24,8 @@ namespace Client
                 string messageText;
                 do
                 {
-                    Console.Clear();
-                    Console.WriteLine("Введите сообщение: ");
+                    //Console.Clear();
+                    Console.WriteLine("Enter your message: ");
                     messageText = Console.ReadLine();
                 } while (string.IsNullOrEmpty(messageText));
                 Message message = new Message()
@@ -36,7 +36,13 @@ namespace Client
                     DateTime = DateTime.Now,
                     Id = Guid.NewGuid().ToString()
                 };
-                //Message message = new Message() { Text = messageText, NicknameFrom = from, NicknameTo = "Server", DateTime = DateTime.Now };
+                if (messageText == "Exit")
+                {
+                    // Exit the chat
+                    Console.WriteLine("Shutting down the application...");
+                    break;
+                }
+
                 string json = message.SerializeMessageToJson();
                 byte[] data = Encoding.UTF8.GetBytes(json);
 
@@ -48,8 +54,8 @@ namespace Client
                 string confirmationMessage = Encoding.UTF8.GetString(confirmationBuffer);
 
                 Console.WriteLine(confirmationMessage);
-                Console.ReadLine();
             }
+
         }
 
     }
