@@ -20,13 +20,17 @@ namespace NetChat
 
             Console.WriteLine("Waiting for client's message: ");
 
-            while (true)
+            CancellationTokenSource cts = new CancellationTokenSource();
+
+            while (!cts.IsCancellationRequested)
             {
                 byte[] buffer = udpClient.Receive(ref iPEndPoint);
                 if (buffer == null) break;
 
                 var messageText = Encoding.UTF8.GetString(buffer);
                 Message? message = Message.DeserializeFromJson(messageText);
+
+                if (message.Text.ToLower().Equals("exit")) cts.Cancel();
 
                 // Check if the message has already been processed
                 if (!messages.ContainsKey(message.Id))
