@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChat", "NetChat\NetChat.csproj", "{1506F312-830F-421F-8E2D-AD7DD5B4E815}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetChat", "NetChat\NetChat.csproj", "{1506F312-830F-421F-8E2D-AD7DD5B4E815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{2EE478EE-DBF4-4C90-B8AF-4A972734BBA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{2EE478EE-DBF4-4C90-B8AF-4A972734BBA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{BADBB651-5640-45BC-B68F-42EE449F697F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2EE478EE-DBF4-4C90-B8AF-4A972734BBA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EE478EE-DBF4-4C90-B8AF-4A972734BBA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EE478EE-DBF4-4C90-B8AF-4A972734BBA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BADBB651-5640-45BC-B68F-42EE449F697F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADBB651-5640-45BC-B68F-42EE449F697F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADBB651-5640-45BC-B68F-42EE449F697F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADBB651-5640-45BC-B68F-42EE449F697F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

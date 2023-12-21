@@ -1,17 +1,15 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using static NetChat.Message;
 
 namespace NetChat
 {
-    internal class UDPServer
+    public class UDPServer
     {
-        //static void Main(string[] args)
-        //{
-        //    Server("Hello");
-
-        //}
-
+        public List<User> Users = new List<User>();
+        // Список сообщений
+        public Dictionary<string, MessageList> MessageLists { get; set; } = new Dictionary<string, MessageList>();
         public async Task ServerListenerAsync()
         {
             UdpClient udpClient = new UdpClient(12345);
@@ -52,6 +50,52 @@ namespace NetChat
             Console.ReadKey();
         }
 
+        public void AddClient(Message message)
+        {
+            if (message.Command == Commands.Register)
+            {
+                if (message.Command == Commands.Register)
+                {
+                    //adds user to the list
+                    User user = new User(message.NicknameFrom);
+                    Users.Add(user);
+                }
+            }
+        }
+        public void RemoveClient(Message message)
+        {
+            if (message.Command == Commands.Delete)
+            {
+                //delete user from the list
+                foreach (User users in Users)
+                {
+                    if (users.Nickname == message.NicknameFrom)
+                    {
+                        Users.Remove(users);
+                        break;
+                    }
+                }
+            }
+        }
+        public void SendToAll(Message message)
+        {
+            //send message to all users in list
+            foreach (User users in Users)
+            {
+                users.Send(message);
+            }
+        }
+        public void SendTo(Message message)
+        {
+            // search user by nickname
+            User? user = Users.FirstOrDefault(u => u.Nickname == message.Recipient);
+
+            // sent message to the user
+            if (user != null)
+            {
+                user.Send(message);
+            }
+        }
         static Message DeserializeMessage(byte[] buffer)
         {
             var json = Encoding.UTF8.GetString(buffer);

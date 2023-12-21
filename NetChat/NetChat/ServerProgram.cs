@@ -1,6 +1,6 @@
 ﻿namespace NetChat
 {
-    internal class Program
+    internal class ServerProgram
     {
         static void Main(string[] args)
         {
