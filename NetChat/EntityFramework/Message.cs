@@ -1,4 +1,6 @@
-﻿namespace EntityFramework
+﻿using EntityFramework;
+
+namespace ChatCommon.Models
 {
     public class Message
     {

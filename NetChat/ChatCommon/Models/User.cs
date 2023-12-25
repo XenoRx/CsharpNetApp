@@ -1,7 +1,4 @@
-﻿
-using ChatCommon.Models;
-
-namespace EntityFramework
+﻿namespace ChatCommon.Models
 {
     public class User
     {
@@ -10,9 +7,5 @@ namespace EntityFramework
         public int Id { get; set; }
         public string? FullName { get; set; }
 
-        //public static implicit operator User(global::ChatCommon.Models.User v)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

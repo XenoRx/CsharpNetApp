@@ -1,9 +1,9 @@
-﻿using System.Text.Json;
-namespace EntityFramework;
+﻿using System.Net;
+using System.Text.Json;
 
-internal class EfMessages
+namespace ChatCommon.Models
 {
-    public enum Commands
+    public enum Command
     {
         Register,
         Message,
@@ -16,8 +16,9 @@ internal class EfMessages
         public DateTime DateTime { get; set; }
         public string? NickNameFrom { get; set; }
         public string? NickNameTo { get; set; }
+        public IPEndPoint? EndPoint { get; set; }
 
-        public Commands Commands { get; set; }
+        public Command Command { get; set; }
 
         public string SerialazeMessageToJSON() => JsonSerializer.Serialize(this);
 
@@ -30,7 +31,7 @@ internal class EfMessages
 
         public override string ToString()
         {
-            return $"{DateTime} \n Получено сообщение {Text} \n от {NickNameFrom}  ";
+            return $"{DateTime} \n Recieved a message {Text} \n from {NickNameFrom}  ";
         }
     }
 }
