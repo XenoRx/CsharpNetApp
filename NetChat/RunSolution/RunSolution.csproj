@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChatCommon\ChatCommon.csproj" />
-    <ProjectReference Include="..\EntityFramework\EntityFramework.csproj" />
+    <ProjectReference Include="..\ChatApplication\ChatApplication.csproj" />
   </ItemGroup>
 
 </Project>

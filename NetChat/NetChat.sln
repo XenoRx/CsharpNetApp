@@ -9,13 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{BADBB651-5640-45BC-B68F-42EE449F697F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unittests", "Unittests\Unittests.csproj", "{29A280E9-E1E3-46F4-8B41-679F8A4924CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "Unittests\UnitTests.csproj", "{29A280E9-E1E3-46F4-8B41-679F8A4924CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatDB", "ChatDB\ChatDB.csproj", "{2421DFC7-392B-485D-B9BE-0277CF19E696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatDB", "ChatDB\ChatDB.csproj", "{2421DFC7-392B-485D-B9BE-0277CF19E696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatApplication", "ChatApplication\ChatApplication.csproj", "{B7DEAB18-62A6-4802-9C50-E26E4FE7C7CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatApplication", "ChatApplication\ChatApplication.csproj", "{B7DEAB18-62A6-4802-9C50-E26E4FE7C7CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatCommon", "ChatCommon\ChatCommon.csproj", "{AE65F540-CCE2-4FAE-9C3A-23FAF30AEFD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatCommon", "ChatCommon\ChatCommon.csproj", "{AE65F540-CCE2-4FAE-9C3A-23FAF30AEFD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunSolution", "RunSolution\RunSolution.csproj", "{2CD670EC-6E64-45BF-9B15-3C7DD47BF917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{AE65F540-CCE2-4FAE-9C3A-23FAF30AEFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE65F540-CCE2-4FAE-9C3A-23FAF30AEFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE65F540-CCE2-4FAE-9C3A-23FAF30AEFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD670EC-6E64-45BF-9B15-3C7DD47BF917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD670EC-6E64-45BF-9B15-3C7DD47BF917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD670EC-6E64-45BF-9B15-3C7DD47BF917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD670EC-6E64-45BF-9B15-3C7DD47BF917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
